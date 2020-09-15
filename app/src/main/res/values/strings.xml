@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Practice</string>
+    <string name="enter_search_keyword">Enter Search Keyword</string>
+    <string name="country_name">Country Name</string>
+    <string name="cases">Cases</string>
+    <string name="death">Death</string>
+    <string name="total_recoverd">Total Recovered</string>
+    <string name="new_death">New Death</string>
+    <string name="new_cases">New Case</string>
+</resources>

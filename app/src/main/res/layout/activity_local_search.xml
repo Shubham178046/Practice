@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LocalSearch">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/search_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_search_keyword"
+            android:textSize="@dimen/text_sp18"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_margin="@dimen/margin_8dp"
+            android:textColorHint="@color/blue" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/margin_8dp"
+            android:layout_margin="@dimen/margin_8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/margin_10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/world_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="World Total"
+                        android:textSize="20sp"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="Total Cases"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="New Cases"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="Total Death"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="New Death"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:text="Total Recoverd"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/total_cases"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="Total Cases"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/new_cases"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="New Cases"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/total_death"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="Total Death"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/new_death"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:text="New Death"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/total_recovred"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:text="Total Recoverd"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/country_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Country Data"
+                    android:padding="@dimen/margin_10dp"
+                    android:textSize="20sp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/insuranceType_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/margin_8dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>
